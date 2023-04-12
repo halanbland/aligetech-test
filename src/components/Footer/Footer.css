@@ -1,0 +1,188 @@
+.footer {
+    width: 100%;
+    margin-top: 80px;
+}
+
+.footer__underline {
+    width: 90%;
+    height: 2px;
+    background: #9c69e2;
+    opacity: 0.2;
+    margin: 0 auto;
+}
+
+.width {
+}
+
+.footer__container {
+    display: flex;
+    padding-top: 100px;
+    justify-content: space-between;
+}
+
+.footer__title {
+    flex: 2;
+}
+
+.footer__logo-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.footer__brand {
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 160%;
+    color: #212353;
+    margin-left: 20px;
+}
+
+.footer__place {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 180%;
+    letter-spacing: 0.01em;
+    color: #212353;
+    width: 240px;
+}
+
+.footer__project {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+    letter-spacing: 0.01em;
+    color: #212353;
+    width: 240px;
+}
+
+.footer__about {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.footer__about-title {
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 160%;
+    color: #212353;
+}
+
+.footer__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer__list-item {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 250%;
+    color: #212353;
+    cursor: pointer;
+}
+
+.footer__help {
+    flex: 1;
+}
+
+.footer__about-title {
+}
+
+.footer__social {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.social__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.social__list-item {
+    background: #e9d8e4;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.footer__since {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 93px;
+    align-items: center;
+}
+
+.footer__since-title {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 180%;
+    letter-spacing: 0.01em;
+    color: #212353;
+}
+
+.inbox {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #d1c3e4;
+    text-align: center;
+    line-height: 40px;
+}
+
+.inbox__icon {
+    color: #9c69e2;
+    font-size: 2.2rem;
+}
+.footer__container-half {
+    display: flex;
+    flex: 1;
+}
+.footer__container-half ~ .footer__container-half {
+    margin-left: 100px;
+}
+
+@media (max-width: 739px) {
+    .footer__container {
+        display: block;
+    }
+
+    .footer__container-half ~ .footer__container-half {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+    .footer__container-half {
+        justify-content: center;
+    }
+
+    .footer__title {
+        text-align: center;
+        padding: 0;
+        margin-left: 50px;
+    }
+
+    .footer__place {
+        margin: 14px 0;
+    }
+
+    .footer__about {
+        text-align: center;
+    }
+
+    .footer__help {
+        text-align: center;
+    }
+
+    .footer__social {
+        text-align: center;
+    }
+
+    .social__list {
+        align-items: center;
+    }
+}

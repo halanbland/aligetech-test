@@ -1,0 +1,56 @@
+.login__logo {
+    margin-top: 50px;
+}
+
+.login__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+}
+
+.login__content {
+    width: 407px;
+    margin: auto;
+}
+
+.login__content-title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0.005em;
+    color: #000000;
+    margin: 0 0 12px;
+}
+
+.login__content-header {
+    text-align: center;
+    font-weight: 400;
+    font-size: 64px;
+    letter-spacing: 0.005em;
+    margin: 0 0 30px;
+    color: #000000;
+}
+
+.login__input {
+    width: 100%;
+    border-radius: 4px;
+    height: 57px;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    padding: 10px;
+}
+
+.btn--l {
+    width: 100%;
+    color: #fff;
+    height: 53px;
+    background: #9c69e2;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
