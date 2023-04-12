@@ -36,9 +36,6 @@
     margin-left: 28.82px;
 }
 
-.header__nav {
-}
-
 .btn--m {
     width: 208.7px;
     height: 59.63px;
@@ -51,9 +48,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.signin {
 }
 
 .header__profile {

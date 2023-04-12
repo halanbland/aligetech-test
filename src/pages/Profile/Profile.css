@@ -5,8 +5,10 @@
 }
 
 .sidebar {
+    position: sticky;
+    top: 0;
     width: 320px;
-    min-height: 140vh;
+    min-height: 100vh;
     height: 100%;
     background: #d9d9d9;
 }
@@ -55,7 +57,7 @@
 }
 
 .profile__input-title {
-    width: 368px;
+    width: 300px;
     height: 49px;
     background: #fdfdfd;
     border: 1px solid #000000;
@@ -67,7 +69,7 @@
 }
 
 .profile__input-tags {
-    width: 368px;
+    width: 300px;
     height: 49px;
     background: #fdfdfd;
     border: 1px solid #000000;
@@ -79,18 +81,18 @@
     margin-left: 10px;
 }
 
+.table__list-icon {
+    display: flex;
+    align-items: center;
+}
+
 .table,
-td,
-th {
+tr {
     border: 1px solid #000;
 }
 
 th {
-    height: 49px;
-}
-
-tr:nth-child(odd) {
-    background-color: white;
+    height: 40px;
 }
 
 th:nth-child(1) {
@@ -123,10 +125,6 @@ th:nth-child(5) {
     margin-top: 20px;
     color: #666;
     font-size: 1.5rem;
-}
-
-.table__list {
-    background-color: #d9d9d9;
 }
 
 .table__icon {

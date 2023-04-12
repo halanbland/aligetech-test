@@ -20,7 +20,6 @@ export const AddDataTable = async (data) => {
     return await axiosInstance.post(API_PATH.ADD_DATA, data);
 };
 export const GetListPost = async (search) => {
-    console.log(search);
     return await axiosInstance.get(API_PATH.GET_LIST_POST, { params: search });
 };
 export const GetTags = async () => {

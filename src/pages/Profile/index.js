@@ -42,8 +42,8 @@ function Profile() {
         getListPosts(search);
     }, [search]);
     const getListPosts = async (search) => {
+        console.log(search);
         const listData = await GetListPost(search);
-        console.log(listData);
 
         if (listData?.data?.posts && listData?.status === 200) {
             setPost(listData?.data);
@@ -74,6 +74,7 @@ function Profile() {
                 let arr = inputDatas.tags.filter(
                     (item) => !item.includes(e.target.value)
                 );
+
                 setInputDatas((prev) => ({
                     ...prev,
                     tags: [...arr],
@@ -91,12 +92,13 @@ function Profile() {
 
     const handleAddData = async () => {
         setIsAdd(false);
+        setCurrpage(1);
         const add = await AddDataTable(inputDatas);
         if (add?.status === 200) {
             getListPosts();
         }
-        setSearch({});
-        setInputDatas({});
+        setSearch(null);
+        setInputDatas(null);
     };
 
     // handle delete
@@ -117,7 +119,6 @@ function Profile() {
             getListPosts(search);
         }
     };
-    console.log(post);
 
     // handleLogout
     const handleLogout = () => {
@@ -128,9 +129,7 @@ function Profile() {
     // next page
 
     const handleNext = () => {
-        console.log(post);
         if (currpage === post.total_page) {
-            console.log(123);
             setCurrpage(1);
             setSearch((prev) => ({
                 ...prev,
@@ -147,7 +146,6 @@ function Profile() {
 
     // handle back
     const handleBack = () => {
-        console.log(post);
         if (currpage === 1) {
             setCurrpage(post.total_page);
             setSearch((prev) => ({
@@ -167,8 +165,8 @@ function Profile() {
         getListPosts(search);
     }, [currpage]);
 
-    // ramdom page
-    const randomPage = (num) => {
+    // change page
+    const handleChangePage = (num) => {
         setCurrpage(num);
         setSearch((prev) => ({
             ...prev,
@@ -238,8 +236,8 @@ function Profile() {
                     {post?.posts &&
                         post?.posts?.map((item, index) => {
                             return (
-                                <tbody>
-                                    <tr key={index} className="table__list">
+                                <tbody key={index}>
+                                    <tr className="table__list">
                                         <th>{index}</th>
                                         <th>{item.title}</th>
                                         <th>{item.description}</th>
@@ -279,7 +277,7 @@ function Profile() {
                         totalPage.map((item, index) => {
                             return (
                                 <button
-                                    onClick={() => randomPage(index + 1)}
+                                    onClick={() => handleChangePage(index + 1)}
                                     key={index}
                                     id={index + 1}
                                     style={
